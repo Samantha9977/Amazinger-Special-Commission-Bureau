@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>喜人特殊委托局</title>
+
+    <style>
+
+        body {
+
+            background-color: rgb(0, 0, 0);
+            color: #ffffff;
+            font-family: Courier New;
+            margin: 40px;
+
+        }
+
+        .service-title p {
+
+            margin: 10px 0 0;
+            font-size: 22px;
+            letter-spacing: 3px;
+
+        }
+
+        .service-intro p {
+
+            margin: 0 0 6px;
+
+        }
+
+        .service-list p {
+
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0;
+            padding: 14px 0;
+            border-bottom: 2px dashed #8b6a46;
+        }
+
+        .stat-card p {
+
+            margin: 8px 0 0;
+            font-size: 22px;
+            font-weight: bold;
+            color: #f5d7a1;
+
+        }
+
+        .title-area h1 {
+
+            color: rgb(179, 118, 118);
+            font-size: 48px;
+            font-family: Courier New;
+            font-weight: bold;
+            line-height: 0.5;
+            white-space: nowrap;
+            margin-bottom: 0;
+        }
+
+        h2 {
+
+            color: #ffffff;
+
+        }
+
+        .service-title h2 {
+
+            font-size: 64px;
+            margin: 0;
+            color: #f5d7a1;
+            letter-spacing: 8px;
+
+        }
+
+        h3 {
+
+            color: #ffffff;
+
+        }
+
+        .stat-card h3 {
+
+            margin: 0;
+            font-size: 56px;
+            color: #f5d7a1;
+
+        }
+        
+        h4 {
+
+            color: #ffffff;
+
+        }
+
+        header {
+
+            position: sticky;
+            top: 0;
+            z-index: 9999;
+            background-color: black;
+
+        }
+
+        .header {
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2px 5px;
+
+        }
+
+        .header-area {
+
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+        }
+
+        .title-area {
+
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+        }
+
+        .title-area p {
+
+            color: rgb(179, 118, 118);
+            font-size: 18px;
+            font-weight: bold;
+            white-space: nowrap;
+
+        }
+
+        .navbar {
+
+            display: flex;
+            justify-content: flex-end;
+            gap: 25px;
+
+        }
+
+        .navbar a {
+            
+            display: flex;
+            flex-direction: column;
+            text-align: center;    
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+
+        }
+
+        .navbar .cn {
+
+            font-size:20px;
+            font-weight:bold;
+
+        }
+
+        .navbar .en {
+
+            font-size: 15px;
+
+        }
+
+        .navbar a:hover {
+
+            color: red;
+
+        }
+
+        .secret-divider {
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 3px;
+            padding-bottom: 10px;
+        }
+
+        .secret-divider::before,
+
+        .secret-divider::after {
+
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: repeating-linear-gradient(
+
+                to right,
+                #ff0000 0px,
+                #ff0000 18px,
+                transparent 20px,
+                transparent 63px
+
+            );
+
+        }
+
+        .secret-divider span {
+
+            color: red;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 0 20px;
+            letter-spacing:13px;
+            font-family: "Courier New", monospace;
+
+        }
+
+        section {
+
+            scroll-margin-top: 165px;
+
+        }
+
+        .service {
+
+            min-height: 100vh;
+
+            background:
+
+                radial-gradient(circle at center, #795b0d 0%, #111 65%);
+
+            color: #f5d7a1;
+            padding: 90px 8%;
+            box-sizing: border-box;
+
+        }
+
+        .service-top {
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 60px;
+            margin-bottom: 40px;
+
+        }
+
+        .service-title {
+
+            background: linear-gradient(
+
+                to bottom,
+
+                #9e2b1e,
+
+                #6f1812
+
+            );
+
+            border: 6px solid #c99b52;
+            border-radius: 10px;
+            padding: 25px 60px;
+            text-align: center;
+
+        }
+
+        .service-intro {
+
+            max-width: 520px;
+            font-size: 22px;
+            line-height: 1.8;
+
+        }
+
+        .service-main {
+
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            margin-top: 40px;
+            margin-bottom: 35px;
+
+            background:
+
+            linear-gradient(
+
+                rgba(255,255,255,0.05),
+
+                rgba(0,0,0,0.05)
+
+            ),
+
+            #1e1c18c8;
+
+            border: 6px solid #581818;
+            border-radius: 12px;
+
+        }
+
+        .service-desc {
+
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            width: 50%;
+            font-size: 26px;
+            font-weight: bold;
+            line-height: 1.7;
+
+        }
+
+        .service-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 25px;
+
+            margin-top: 40px;
+        }
+
+        .service-card {
+
+            background: #7b1f1f;
+
+            border: 4px solid #c99b52;
+
+            border-radius: 12px;
+
+            padding: 25px;
+
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+
+            transform: translateY(-5px);
+        }
+
+        .service-stats {
+
+            display: flex;
+            gap: 80px;
+            margin-top: 40px;
+            justify-content: center;
+
+        }
+
+        .stat-card {
+
+            flex: 1;
+            background-color: #7b1f1f;
+            width: 250px;
+            padding: 15px;
+            padding: 25px 20px;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            border-radius: 12px;
+            box-shadow: 0 0 0 4px #8b0f01;
+            border: 4px solid #3a0d0d;
+            text-align: center;
+
+            transition: 0.3s;
+
+        }
+
+        .stat-card:hover {
+
+            transform: scale(1.15);
+
+            box-shadow:
+
+                0 0 0 8px #f5d7a1,
+                0 0 20px rgba(245,215,161,0.6),
+                0 15px 30px rgba(0,0,0,0.4);
+
+        }
+
+        .fail-card:hover {
+
+            transform: scale(0.5);
+
+            box-shadow:
+                0 0 0 8px #565149,
+                0 5px 10px rgba(0,0,0,0.2);
+
+        }
+
+        .agency-name {
+
+            color: #b7352c;
+            font-weight: bold;
+            text-align: right;
+
+        }
+
+        .card {
+
+            background-color: rgb(59, 83, 60);
+            width: 1250px;
+            padding: 15px;
+            padding-left: 40px;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            border-radius: 12px;
+            box-shadow: 5px 4px 10px rgba(238, 243, 238, 0.1);
+
+        }
+
+        .player {
+
+            display: flex;
+            padding: 15px;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            border-radius: 12px;
+            gap: 40px;
+            align-items: center;
+        
+        }
+
+        .player-card {
+
+            background-color: rgb(59, 83, 60);
+            width: 1250px;
+            padding: 15px;
+            padding-left: 40px;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            border-radius: 12px;
+            box-shadow: 10px 8px 10px rgba(238, 243, 238, 0.1);
+        
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="header">
+            
+            <div class="header-area">
+
+                <img src="images/logo.png" width="100" height="100" alt="喜人特殊委托大厅logo">
+
+                <div class="title-area">
+                
+                    <h1>喜人特殊委托大厅</h1>
+                    <p>AMAZINGER SPECIAL COMMISSION BUREAU</p>
+
+                </div>
+
+            </div>
+
+            <nav class="navbar", style="font-size: 20px;">
+
+                <a href="#首页">
+
+                    <span class="cn">首页</span>
+                    <span class="en">Home</span>
+
+                </a>
+                
+                <a href="#业务大厅">
+
+                    <span class="cn">业务大厅</span>
+                    <span class="en">Service</span>
+
+                </a>
+
+                <a href="#佣兵图鉴">
+                
+                    <span class="cn">佣兵图鉴</span>
+                    <span class="en">Agents</span>   
+
+                </a>
+
+                <a href="#实时任务">
+
+                    <span class="cn">实时任务</span>
+                    <span class="en">Tasks</span>
+
+                </a>
+
+                <a href="#发布委托">
+
+                    <span class="cn">发布委托</span>
+                    <span class="en">Order
+
+                </a>
+
+                <a href="#地下酒馆">
+
+                    <span class="cn">地下酒馆</span>
+                    <span class="en">Community</span>
+
+                </a>
+
+                <a href="#用户反馈">
+                    
+                    <span class="cn">用户反馈</span>
+                    <span class="en">Reviews</span> 
+
+                </a>
+
+            </nav>      
+
+        </div>
+
+        <div class="secret-divider">
+
+            <span>【TOP SECRET - 阅后即焚】</span>
+
+        </div>
+
+    </header>
+
+    <section id="首页">
+
+        <h2 style="color: rgb(255, 234, 0); text-align: center; font-family: Courier New; font-size: 35px; text-shadow: 10px 10px 10px rgb(255, 0, 0); letter-spacing:10px">【警告‼️非授权访问将被追踪定位】</h2>
+        <img src="images/封面2.png" width=100% alt="喜人特殊委托大厅封面">
+
+    </section>
+
+    <section class="service" id="业务大厅">
+
+        <div class="stage-content">
+
+            <div class="service-top">
+
+                <div class="service-title">
+
+                    <h2>业务大厅</h2>
+                    <p>Service</p>
+
+                </div>
+
+                <div class="service-intro">
+
+                    <p>“在这个世界上，</p>
+                    <p>有人需要杀手，有人需要怪盗，有人需要卧底，</p>
+                    <p>也有人需要别人帮自己完成拼多多最后一刀。”</p>
+                    <p class="agency-name">—— 喜人特殊业务委托局</p>
+
+                </div>
+
+            </div>
+
+            <div class="service-main">
+
+                <div class="service-desc">
+
+                    <p>本局成立于某个无法考证的平行宇宙。</p>
+                    <p>专门处理各类特殊业务委托：</p>
+
+                </div>
+
+                <div class="service-grid">
+
+                    <div class="service-card">
+                        <h3>🎯 暗杀追击</h3>
+                        <p>精准、高效、售后概不负责。</p>
+                    </div>
+
+                    <div class="service-card">
+                        <h3>🕵️ 情报收集</h3>
+                        <p>邻居家的WiFi密码也能查。</p>
+                    </div>
+
+                    <div class="service-card">
+                        <h3>💎 宝物窃夺</h3>
+                        <p>只偷艺术品，不偷良心。</p>
+                    </div>
+
+                    <div class="service-card">
+                        <h3>🔥 火并协调</h3>
+                        <p>专业团队，全程录像。</p>
+                    </div>
+
+                    <div class="service-card">
+                            <h3>🛡️ 解救保护</h3>
+                            <p>丰富拆弹经验</p>
+                    </div>
+
+                    <div class="service-card">
+                        <h3>🪓 拼多多帮砍</h3>
+                        <p>助力薅羊毛大业</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="service-stats">
+
+                <div class="stat-card">
+
+                    <h3>8888+</h3>
+                    <p>累计委托</p>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <h3>99.99%</h3>
+                    <p>客户满意率</p>
+
+                </div>
+
+                <div class="stat-card fail-card">
+
+                    <h3>50%</h3>
+                    <p>任务成功率</p>
+                    <p style="font-size: 12px">（另外50%属于节目效果）</p>
+
+                </div>
+
+            </div>
+
+        </div>
+        
+    </section>
+
+    <section id="佣兵图鉴">
+
+        <div class="card">
+
+            <h2>佣兵图鉴</h2>
+
+                <h3>杀手</h3>
+
+                    <p>n. 毒蛇帮</p>
+                    <p>n. 蒋龙张弛</p>
+
+                <h3>盗贼</h3>
+
+                    <p>n. 默契怪盗</p>
+
+                <h3>特工</h3>
+
+                    <h4>1. 史密斯夫妇</h4>
+
+                        <p>代号：Mr. & Mrs. Smith</p>
+                        <p>危险等级：SSS</p>
+                        <p>擅长领域：相爱相杀/暗杀/结婚纪念日危机</p>
+                        <p>接单状态：营业中（但需要提前预约，避免夫妻吵架）</p>
+                        
+                    <h4>n. 王特工</h4>
+                        
+                    <div class="player">
+
+                        <img src="images/绝命双子星.JPG" width="350" height="300">
+                    
+                        <div class="player-card">
+
+                            <h4 style="font-size: 24px; font-weight: bold;">1346. 绝命双子星</h4>
+                            
+                                <p>代号：The Fatal Twins</p>
+                                <p>危险等级：SSS（极度危险，且极度吵闹）</p>
+                                <p>擅长领域：双人同步暗杀/战术性吵架/抢功劳/互相甩锅</p>
+                                <p>接单状态：营业中（但前提是两人今天没在冷战）</p>
+                                <p>核心技能标签：镜像走位、影分身、娃娃鱼妖震慑、用沾满地沟油的树杈偷袭敌人腰间盘、超毒攻击</p>
+                        
+                        </div>
+
+                    </div>
+        </div>
+       
+    </section>    
+    
+    <section id="实时任务">
+
+        <div class="card">
+
+            <h2>实时任务</h2>
+
+                <h3>悬赏榜</h3>
+
+                    <h4>[已接单]偷走前任的朋友圈封面</h4>
+
+                        <p>赏金：一份番茄炒蛋</p>
+                        <p>执行者：默契怪盗</p>
+                        <p>进度：正在唱跳中（默契怪盗～）</p>  
+
+                <h3>通缉榜</h3>
+
+                    <h4>[‼️紧急-未接单]消灭周一的早会</h4>
+
+                        <p>赏金：两杯冰美式</p>
+                        <p>备注：让它看起来像自然死亡</p>
+                
+                    <h4>[未接单]暗杀对家的PPT</h4>
+
+                        <p>赏金：三房榴莲</p>
+                        <p>备注：别弄脏我的新皮鞋</p>
+        
+        </div>
+
+    </section>
+    
+    <section id="发布委托">
+
+        <div class="card">
+
+            <h2>发布委托</h2>
+        
+        </div> 
+
+    </section>
+
+    <section id="地下酒馆">
+
+        <div class="card">
+
+            <h2>地下酒馆</h2>
+        
+        </div>
+
+    </section>
+
+    <section id="用户反馈">
+        
+        <div class="card">
+
+            <h2 id="用户反馈">用户反馈</h2>
+
+                <h3>⭐️⭐️⭐️⭐️⭐️匿名雇主-绝命双子星</h3>
+
+                    <p>“这对双子星简直是我见过最吵闹的杀手组合了！他们的同步暗杀技能确实厉害，但每次执行任务后都要吵架，感觉比任务还累。不过他们的镜像走位和影分身技能真的让人印象深刻，强烈推荐给喜欢刺激的客户！”</p>
+
+                <h3>⭐️⭐️⭐⭐︎⭐︎匿名雇主-绝命双子星</h3>
+
+                    <p>“绝命双子星的表现真是让我又爱又恨！他们的战术性吵架和抢功劳技能让整个任务过程充满了戏剧性，感觉像在看一场精彩的电视剧。不过他们的互相甩锅技能有时候也挺烦人的，但不得不说，他们的攻击力真的很强，绝对是值得信赖的杀手组合！”</p>
+
+                <h3>⭐︎⭐︎⭐︎⭐︎⭐︎匿名雇主-绝命双子星</h3>
+
+                    <p>“千万别雇他们！他们为了抢着杀目标，差点把我也给杀了！”</p>
+        
+        </div>
+
+    </section>
+
+</body>
+
+</html>
