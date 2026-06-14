@@ -511,17 +511,74 @@
 
         .coverage-item{
 
-            display: flex;
-
-            align-items: center;
-
-            gap: 30px;
-
+            position: relative;
+            min-height: 118px;
             padding: 25px 0;
-
             border-bottom: 2px dashed rgba(201,155,82,0.5);
-
             text-align: left;
+            isolation: isolate;
+
+        }
+
+        .coverage-summary,
+        .coverage-detail{
+
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            min-height: 68px;
+            box-sizing: border-box;
+
+        }
+
+        .coverage-summary{
+
+            transition: opacity 0.25s ease;
+
+        }
+
+        .coverage-detail{
+
+            position: absolute;
+            top: -24px;
+            left: -34px;
+            right: -34px;
+            z-index: 2;
+            padding: 28px 34px;
+            min-height: 230px;
+            background: linear-gradient(135deg, #8b2319, #2b1710 58%, #111);
+            border: 4px solid #f5d7a1;
+            border-radius: 8px;
+            box-shadow: 0 28px 58px rgba(0,0,0,0.7), 0 0 0 10px rgba(245,215,161,0.12), 0 0 34px rgba(245,215,161,0.35);
+            opacity: 0;
+            pointer-events: none;
+            transform: scale(0.82);
+            transition: opacity 0.28s ease, transform 0.28s ease, box-shadow 0.28s ease;
+
+        }
+
+        .coverage-item:hover{
+
+            z-index: 5;
+
+        }
+
+        .coverage-item:hover .coverage-summary{
+
+            opacity: 0;
+
+        }
+
+        .coverage-item:hover .coverage-detail{
+
+            opacity: 1;
+            transform: scale(1.08);
+
+        }
+
+        .coverage-text{
+
+            min-width: 0;
 
         }
 
@@ -530,6 +587,14 @@
             .coverage-list {
 
                 grid-template-columns: 1fr;
+
+            }
+
+            .coverage-detail {
+
+                left: -10px;
+                right: -10px;
+                min-height: 150px;
 
             }
 
@@ -545,6 +610,12 @@
 
             color: #c99b52;
             
+        }
+
+        .coverage-detail .number{
+
+            color: #f5d7a1;
+
         }
 
         .service-stats {
@@ -774,78 +845,180 @@
 
                     <div class="coverage-item">
 
-                        <span class="number">01</span>
+                        <div class="coverage-summary">
+
+                            <span class="number">01</span>
+                            
+                            <div class="coverage-text">
+                            
+                                <h4>🎯 暗杀追击</h4>
+                                <p>物理超度太血腥，音乐超度要人命。</p>
+                            
+                            </div>
+
+                        </div>
+
+                        <div class="coverage-detail">
+
+                            <span class="number">01</span>
+                            
+                            <div class="coverage-text">
+                            
+                                <h4>🎯 暗杀追击</h4>
+                                <p>可定制追击路线、登场音乐与最终姿势，保证目标还没跑远就先被气势震住。</p>
+                            
+                            </div>
+
+                        </div>
+                    
+                    </div>
+
+                    <div class="coverage-item">
+                    
+                        <div class="coverage-summary">
+
+                            <span class="number">02</span>
                         
-                        <div>
+                            <div class="coverage-text">
                         
-                            <h4>🎯 暗杀追击</h4>
-                            <p>精准、高效、售后概不负责。</p>
+                                <h4>📁 情报收集</h4>
+                                <p>速通高考第六题答案。</p>
                         
+                            </div>
+
+                        </div>
+
+                        <div class="coverage-detail">
+
+                            <span class="number">02</span>
+                        
+                            <div class="coverage-text">
+                        
+                                <h4>📁 情报收集</h4>
+                                <p>从隔壁桌八卦到绝密文件夹，统统纳入线索库，附赠一份看起来很专业的分析报告。</p>
+                        
+                            </div>
+
                         </div>
                     
                     </div>
 
                     <div class="coverage-item">
                     
-                        <span class="number">02</span>
-                    
-                        <div>
-                    
-                            <h4>📁 情报收集</h4>
-                            <p>邻居家的WiFi密码也能查。</p>
-                    
+                        <div class="coverage-summary">
+
+                            <span class="number">03</span>
+                        
+                            <div class="coverage-text">
+                        
+                                <h4>💎 宝物窃夺</h4>
+                                <p>不偷金银，只偷心跳。</p>
+                        
+                            </div>
+
+                        </div>
+
+                        <div class="coverage-detail">
+
+                            <span class="number">03</span>
+                        
+                            <div class="coverage-text">
+                        
+                                <h4>💎 宝物窃夺</h4>
+                                <p>珠宝、证据、尴尬聊天记录均可托管，行动结束后只留下风声和一句“刚才发生了什么”。</p>
+                        
+                            </div>
+
                         </div>
                     
                     </div>
 
                     <div class="coverage-item">
                     
-                        <span class="number">03</span>
-                    
-                        <div>
-                    
-                            <h4>💎 宝物窃夺</h4>
-                            <p>只偷艺术品，不偷良心。</p>
-                    
+                        <div class="coverage-summary">
+
+                            <span class="number">04</span>
+                        
+                            <div class="coverage-text">
+                        
+                                <h4>🔥 火并协调</h4>
+                                <p>夺棍者，死！（哨音）</p>
+                        
+                            </div>
+
+                        </div>
+
+                        <div class="coverage-detail">
+
+                            <span class="number">04</span>
+                        
+                            <div class="coverage-text">
+                        
+                                <h4>🔥 火并协调</h4>
+                                <p>负责约架排期、武器清点和退场路线规划，最大限度减少误伤友军与尴尬冷场。</p>
+                        
+                            </div>
+
                         </div>
                     
                     </div>
 
                     <div class="coverage-item">
                     
-                        <span class="number">04</span>
-                    
-                        <div>
-                    
-                            <h4>🔥 火并协调</h4>
-                            <p>专业团队，全程录像。</p>
-                    
+                        <div class="coverage-summary">
+
+                            <span class="number">05</span>
+                        
+                            <div class="coverage-text">
+                        
+                                <h4>🛡️ 解救保护</h4>
+                                <p>我剪线你放心，闭上你的突突眼儿。</p>
+                        
+                            </div>
+
+                        </div>
+
+                        <div class="coverage-detail">
+
+                            <span class="number">05</span>
+                        
+                            <div class="coverage-text">
+                        
+                                <h4>🛡️ 解救保护</h4>
+                                <p>紧急撤离、人质交换、社死现场救援均可处理，主打一个把你完整带走。</p>
+                        
+                            </div>
+
                         </div>
                     
                     </div>
 
                     <div class="coverage-item">
                     
-                        <span class="number">05</span>
-                    
-                        <div>
-                    
-                            <h4>🛡️ 解救保护</h4>
-                            <p>打入内部，绝不暴露。</p>
-                    
-                        </div>
-                    
-                    </div>
+                        <div class="coverage-summary">
 
-                    <div class="coverage-item">
-                    
-                        <span class="number">06</span>
-                    
-                        <div>
-                    
-                            <h4>🪓拼多多帮砍</h4>
-                            <p>拼多多最后一刀专项服务。</p>
-                    
+                            <span class="number">06</span>
+                        
+                            <div class="coverage-text">
+                        
+                                <h4>🪓 拼多多帮砍</h4>
+                                <p>不杀生只杀价，砍一刀可免单。</p>
+                        
+                            </div>
+
+                        </div>
+
+                        <div class="coverage-detail">
+
+                            <span class="number">06</span>
+                        
+                            <div class="coverage-text">
+                        
+                                <h4>🪓 拼多多帮砍</h4>
+                                <p>召集全局人脉进行最后一刀围剿，砍不下来也能砍出一场团建。</p>
+                        
+                            </div>
+
                         </div>
                     
                     </div>
