@@ -512,6 +512,8 @@
         .coverage-item{
 
             position: relative;
+            display: flex;
+            align-items: center;
             min-height: 118px;
             padding: 25px 0;
             border-bottom: 2px dashed rgba(201,155,82,0.5);
@@ -533,6 +535,7 @@
 
         .coverage-summary{
 
+            width: 100%;
             transition: opacity 0.25s ease;
 
         }
@@ -711,6 +714,294 @@
             margin-bottom: 40px;
             border-radius: 12px;
             box-shadow: 10px 8px 10px rgba(238, 243, 238, 0.1);
+        
+        }
+
+        .mercenary-section {
+
+            min-height: 100vh;
+            padding: 80px 60px;
+            background: #151515;
+            color: #f7e1b5;
+
+        }
+
+        .mercenary-header {
+
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 40px;
+
+        }
+
+        .title-card {
+
+            width: 360px;
+            padding: 35px 20px;
+            text-align: center;
+            background: linear-gradient(#a52b21, #751811);
+            border: 8px solid #c99645;
+            border-radius: 20px;
+            box-shadow: 0 0 25px rgba(201, 150, 69, 0.4);
+
+        }
+
+        .title-card h2 {
+
+            font-size: 56px;
+            margin: 0;
+            letter-spacing: 8px;
+
+        }
+
+        .title-card p {
+
+            font-size: 22px;
+            letter-spacing: 10px;
+            margin-top: 15px;
+        
+        }
+
+        .slogan {
+
+            flex: 1;
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 4px;
+            color: #ffd99a;
+
+        }
+
+        .mercenary-main {
+
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 30px;
+
+        }
+
+        .mercenary-left {
+
+            background: #241f1b;
+            border: 4px solid #6b4b2a;
+            border-radius: 16px;
+            padding: 20px;
+
+        }
+
+        .mercenary-right {
+
+            background: #ead2a4;
+            color: #21160f;
+            border: 6px solid #8a5a2b;
+            border-radius: 16px;
+            padding: 25px;
+
+        }
+
+        .camp-tabs {
+
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-bottom: 25px;
+
+        }
+
+        .camp-tabs button {
+
+            padding: 12px 0;
+            border: 3px solid #b8863b;
+            border-radius: 10px;
+            background: #4a1b16;
+            color: #f7e1b5;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+
+        }
+
+        .camp-tabs button:hover,
+        .camp-tabs button.active {
+
+            background: #b52b20;
+            transform: translateY(-3px);
+
+        }
+
+        .camp-row {
+
+            margin-bottom: 28px;
+            border-bottom: 2px dashed #7d5a35;
+            padding-bottom: 24px;
+        
+        }
+
+        .camp-row-title {
+        
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 14px;
+        
+        }
+
+        .small-label {
+        
+            background: #9e2b20;
+            color: #ffe3aa;
+            border: 3px solid #c99645;
+            border-radius: 8px;
+            padding: 6px 14px;
+            font-weight: bold;
+            white-space: nowrap;
+        
+        }
+
+        .camp-row-title p {
+        
+            flex: 1;
+            margin: 0;
+            font-size: 15px;
+        
+        }
+
+        .camp-row-title a {
+        
+            color: #ffb347;
+            text-decoration: none;
+            font-weight: bold;
+        
+        }
+
+        .mini-card-box {
+        
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        
+        }
+
+        .mini-card {
+        
+            background: #d8b579;
+            color: #21160f;
+            border: 4px solid #7a4d24;
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.3s;
+        
+        }
+
+        .mini-card:hover {
+        
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: 0 0 18px rgba(255, 191, 87, 0.6);
+        
+        }
+
+        .mini-card img {
+        
+            width: 100%;
+            height: 130px;
+            object-fit: cover;
+        
+        }
+
+        .mini-card h4 {
+        
+            margin: 8px 0 4px;
+            font-size: 16px;
+        
+        }
+
+        .mini-card p {
+        
+            margin: 0 0 10px;
+            color: #8b1e16;
+        
+        }
+
+        .profile-top {
+            
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 25px;
+        
+        }
+
+        .profile-top img {
+        
+            width: 100%;
+            height: 360px;
+            object-fit: cover;
+            border: 5px solid #21160f;
+        
+        }
+
+        .profile-info h3 {
+        
+            font-size: 36px;
+            margin: 0 0 10px;
+        
+        }
+
+        .stars {
+        
+            font-size: 26px;
+            color: #9e2b20;
+            letter-spacing: 6px;
+        
+        }
+
+        .profile-info p {
+        
+            font-size: 18px;
+            border-bottom: 2px dashed #8a5a2b;
+            padding-bottom: 10px;
+        
+        }
+
+        .skill-tags {
+        
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        
+        }
+
+        .skill-tags span {
+        
+            background: #21160f;
+            color: #f7e1b5;
+            padding: 8px 12px;
+            border-radius: 8px;
+        
+        }
+
+        .task-review {
+        
+            margin-top: 30px;
+            background: #21160f;
+            color: #f7e1b5;
+            padding: 25px;
+            border-radius: 12px;
+        
+        }
+
+        .task-review h4 {
+        
+            font-size: 26px;
+            margin: 0 0 12px;
+        
+        }
+
+        .task-review p {
+        
+            font-size: 20px;
         
         }
 
@@ -1058,6 +1349,127 @@
     </section>
 
     <section id="佣兵图鉴">
+
+        <div class="mercenary-header">
+
+                <div class="title-card">
+
+                    <h2>佣兵图鉴</h2>
+
+                    <p>Mercenary</p>
+
+                </div>
+
+                <div class="slogan">
+
+                    四大阵营，真实可靠，专业团队，绝不掉凳
+
+                </div>
+
+        </div>
+
+        <div class="mercenary-main">
+
+            <div class="mercenary-left">
+
+                <div class="camp-tabs">
+
+                    <button class="active">杀手</button>
+
+                    <button>盗贼</button>
+
+                    <button>特工</button>
+
+                    <button>异族</button>
+
+                </div>
+
+                <div class="camp-list">
+
+                    <div class="camp-row">
+
+                        <div class="camp-row-title">
+
+                            <span class="small-label">杀手</span>
+                            <p>专业解决一切棘手问题，原则上解决问题，不保证问题对象存活。</p>
+                            <a href="#">更多 →</a>
+
+                        </div>
+
+                        <div class="mini-card-box">
+
+                            <div class="mini-card">
+                            
+                                <img src="images/killer1.jpg" alt="">
+                                <h4>1421.血色钢琴师</h4>
+                                <p>★★★★★</p>
+                            
+                            </div>
+
+                            <div class="mini-card">
+                            
+                                <img src="images/killer2.jpg" alt="">
+                                <h4>1346.绝命双子星</h4>
+                                <p>★★★★★</p>
+                            
+                            </div>
+                    
+                        </div>
+                    
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="mercenary-right">
+
+                <div class="profile-card">
+
+                    <div class="profile-top">
+                    
+                        <img src="images/killer2.jpg" alt="绝命双子星">
+
+                        <div class="profile-info">
+                    
+                            <h3>1346.绝命双子星</h3>
+                            <p class="stars">★★★★★</p>
+                            <p><strong>代号：</strong>绝命双子星</p>
+                            <p><strong>危险等级：</strong>★★★★★</p>
+                            <p><strong>擅长领域：</strong>潜入、刺杀、双人配合</p>
+                            <p><strong>接单状态：</strong>🟢 在线接单</p>
+
+                            <div class="skill-tags">
+                       
+                                <span>#双胞胎</span>
+                                <span>#伪装大师</span>
+                                <span>#连环计</span>
+                                <span>#塑料兄弟情</span>
+                       
+                            </div>
+                       
+                        </div>
+                    
+                    </div>
+
+                    <div class="task-review">
+                    
+                        <h4>任务评价：</h4>
+                        <p>“虽然任务完成了，但他们俩一路都在吵架。”</p>
+                    
+                    </div>
+                
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
 
         <div class="card">
 
