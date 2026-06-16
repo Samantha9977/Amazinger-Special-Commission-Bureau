@@ -656,8 +656,7 @@
 
                 0 0 0 8px #f5d7a1,
                 0 15px 30px rgba(0,0,0,0.4);
-
-            
+ 
         }
 
         .stat-card.success-rate:hover {
@@ -1003,6 +1002,88 @@
         
             font-size: 20px;
         
+        }
+
+        .camp-detail-grid {
+            
+            display: none;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            max-height: 520px;
+            overflow-y: auto;
+            padding-right: 8px;
+       
+        }
+
+        .detail-mini-card {
+        
+            background: #d8b579;
+            color: #21160f;
+            border: 4px solid #7a4d24;
+            border-radius: 12px;
+            overflow: hidden;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.3s;
+        
+        }
+
+        .detail-mini-card:hover {
+        
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: 0 0 18px rgba(255, 191, 87, 0.6);
+        
+        }
+
+        .detail-mini-card img {
+        
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        
+        }
+
+        .detail-mini-card h4 {
+        
+            margin: 10px 0 5px;
+            font-size: 16px;
+        
+        }
+
+        .detail-mini-card p {
+        
+            margin: 0 0 12px;
+            color: #8b1e16;
+        
+        }
+
+        .back-btn {
+         
+            display: none;
+            margin-bottom: 15px;
+            padding: 10px 18px;
+            background: #9e2b20;
+            color: #ffe3aa;
+            border: 3px solid #c99645;
+            border-radius: 10px;
+            font-weight: bold;
+            cursor: pointer;
+        
+        }
+
+        .back-btn:hover {
+       
+            transform: translateY(-3px);
+            background: #b52b20;
+        
+        }
+
+        .mini-card.selected,
+        .detail-mini-card.selected {
+
+            outline: 4px solid #ffd15c;
+            box-shadow: 0 0 20px rgba(255, 209, 92, 0.8);
+
         }
 
     </style>
@@ -1374,13 +1455,13 @@
 
                 <div class="camp-tabs">
 
-                    <button class="active">杀手</button>
+                    <button class="active" data-camp="killer">杀手</button>
 
-                    <button>盗贼</button>
+                    <button data-camp="thief">盗贼</button>
 
-                    <button>特工</button>
+                    <button data-camp="agent">特工</button>
 
-                    <button>异族</button>
+                    <button data-camp="alien">异族</button>
 
                 </div>
 
@@ -1392,13 +1473,13 @@
 
                             <span class="small-label">杀手</span>
                             <p>专业解决一切棘手问题，原则上解决问题，不保证问题对象存活。</p>
-                            <a href="#">更多 →</a>
+                            <a href="#" data-camp="killer">更多 →</a>
 
                         </div>
 
                         <div class="mini-card-box">
 
-                            <div class="mini-card">
+                            <div class="mini-card" data-camp="killer" data-index="0">
                             
                                 <img src="images/killer1.jpg" alt="">
                                 <h4>1421.血色钢琴师</h4>
@@ -1406,7 +1487,7 @@
                             
                             </div>
 
-                            <div class="mini-card">
+                            <div class="mini-card" data-camp="killer" data-index="1">
                             
                                 <img src="images/killer2.jpg" alt="">
                                 <h4>1346.绝命双子星</h4>
@@ -1415,14 +1496,106 @@
                             </div>
                     
                         </div>
+
+                        <div class="camp-row-title">
+
+                            <span class="small-label">盗贼</span>
+                            <p>盗贼盗贼盗盗贼贼。</p>
+                            <a href="#" data-camp="thief">更多 →</a>
+
+                        </div>
+
+                        <div class="mini-card-box">
+
+                            <div class="mini-card" data-camp="thief" data-index="0">
+                            
+                                <img src="images/thief1.jpg" alt="">
+                                <h4>111.盗贼0号</h4>
+                                <p>★★★★★</p>
+                            
+                            </div>
+
+                            <div class="mini-card" data-camp="thief" data-index="1">
+                            
+                                <img src="images/thief2.jpg" alt="">
+                                <h4>222.盗贼1号</h4>
+                                <p>★★★★★</p>
+                            
+                            </div>
                     
+                        </div>
+
+                        <div class="camp-row-title">
+
+                            <span class="small-label">特工</span>
+                            <p>特工特工特特工工</p>
+                            <a href="#" data-camp="agent">更多 →</a>
+
+                        </div>
+
+                        <div class="mini-card-box">
+
+                            <div class="mini-card" data-camp="agent" data-index="0">
+                            
+                                <img src="images/agent1.jpg" alt="">
+                                <h4>333.特工0号</h4>
+                                <p>★★★★★</p>
+                            
+                            </div>
+
+                            <div class="mini-card" data-camp="agent" data-index="1">
+                            
+                                <img src="images/agent2.jpg" alt="">
+                                <h4>444.特工1号</h4>
+                                <p>★★★★★</p>
+                            
+                            </div>
+                    
+                        </div>
+
+                        <div class="camp-row-title">
+
+                            <span class="small-label">异族</span>
+                            <p>异族异族异异族族</p>
+                            <a href="#" data-camp="alien">更多 →</a>
+
+                        </div>
+
+                        <div class="mini-card-box">
+
+                            <div class="mini-card" data-camp="alien" data-index="0">
+                            
+                                <img src="images/alien1.jpg" alt="">
+                                <h4>555.异族0号</h4>
+                                <p>★★★★★</p>
+                            
+                            </div>
+
+                            <div class="mini-card" data-camp="alien" data-index="1">
+                            
+                                <img src="images/alien2.jpg" alt="">
+                                <h4>666.异族1号</h4>
+                                <p>★★★★★</p>
+                            
+                            </div>
+                    
+                        </div>
+
                     </div>
 
                 </div>
 
+                <button class="back-btn" id="backBtn">← 返回全部图鉴</button>
+
+                <div class="camp-detail-grid" id="campDetailGrid">
+                </div>
+
+                <div class="camp-detail-grid" id="campDetailGrid">
+                </div>
+
             </div>
 
-            <div class="mercenary-right">
+            <div class="mercenary-right" id="profileDetail">
 
                 <div class="profile-card">
 
@@ -1466,6 +1639,328 @@
         </div>
 
     </section>
+
+    <script>
+        const camps = {
+            killer: [
+
+                {
+                    
+                    title: "1346.绝命双子星",
+                    img: "images/killer2.jpg",
+                    stars: "★★★★★",
+                    code: "绝命双子星",
+                    danger: "★★★★★",
+                    field: "潜入、刺杀、双人配合",
+                    status: "🟢 在线接单",
+                    tags: ["#双胞胎", "#伪装大师", "#连环计", "#塑料兄弟情"],
+                    review: "兄弟二人同时接单，可享第二位半价。"
+
+                },
+                
+                {
+                
+                    title: "1346.绝命双子星",
+                    img: "images/killer2.jpg",
+                    stars: "★★★★★"
+                
+                },
+                
+                {
+                
+                    title: "998.西装暴徒",
+                    img: "images/killer3.jpg",
+                    stars: "★★★★☆"
+                
+                },
+                
+                {
+                
+                    title: "886.沉默厨师",
+                    img: "images/killer4.jpg",
+                    stars: "★★★★☆"
+                
+                }
+            
+            ],
+
+            thief: [
+            
+                {
+                
+                    title: "784.月光怪盗",
+                    img: "images/thief1.jpg",
+                    stars: "★★★★★"
+                
+                },
+                
+                {
+                
+                    title: "1102.神偷老六",
+                    img: "images/thief2.jpg",
+                    stars: "★★★★☆"
+                
+                },
+                
+                {
+                
+                    title: "632.开锁大师",
+                    img: "images/thief3.jpg",
+                    stars: "★★★★☆"
+                
+                },
+                
+                {
+                
+                    title: "521.顺手牵羊",
+                    img: "images/thief4.jpg",
+                    stars: "★★★☆☆"
+                
+                }
+            
+            ],
+
+            agent: [
+            
+                {
+                
+                    title: "1364.绝命双子星",
+                    img: "images/agent1.jpg",
+                    stars: "★★★★★"
+                
+                },
+                
+                {
+                
+                    title: "913.代号乌鸦",
+                    img: "images/agent2.jpg",
+                    stars: "★★★★☆"
+                
+                },
+                
+                {
+                
+                    title: "774.深海幽灵",
+                    img: "images/agent3.jpg",
+                    stars: "★★★★☆"
+                
+                },
+                
+                {
+                
+                    title: "404.失联特工",
+                    img: "images/agent4.jpg",
+                    stars: "★★★☆☆"
+                
+                }
+            
+            ],
+
+            alien: [
+            
+                {
+                
+                    title: "541.九尾狐",
+                    img: "images/alien1.jpg",
+                    stars: "★★★★★"
+                
+                },
+                
+                {
+                
+                    title: "403.树精老张",
+                    img: "images/alien2.jpg",
+                    stars: "★★★★☆"
+                
+                },
+                
+                {
+                
+                    title: "777.吸血鬼实习生",
+                    img: "images/alien3.jpg",
+                    stars: "★★★☆☆"
+                
+                },
+                
+                {
+                
+                    title: "233.外星客服",
+                    img: "images/alien4.jpg",
+                    stars: "★★★☆☆"
+                
+                }
+            
+            ]
+        
+        };
+
+        const campList = document.querySelector(".camp-list");
+        const campDetailGrid = document.querySelector("#campDetailGrid");
+        const campButtons = document.querySelectorAll("[data-camp]");
+
+        function showCamp(campName) {
+            
+            campList.style.display = "none";
+            campDetailGrid.style.display = "grid";
+            backBtn.style.display = "inline-block";
+            campDetailGrid.innerHTML = "";
+
+            camps[campName].forEach(function(person) {
+            
+                const card = document.createElement("div");
+                card.className = "detail-mini-card";
+
+                card.innerHTML = `
+            
+                    <img src="${person.img}" alt="${person.title}">
+                    <h4>${person.title}</h4>
+                    <p>${person.stars}</p>
+                
+                `;
+
+                card.addEventListener("click", function() {
+                    
+                    showProfile(person);
+
+                    document.querySelectorAll(".detail-mini-card").forEach(function(item) {
+                    
+                        item.classList.remove("selected");
+                    
+                    });
+
+                    card.classList.add("selected");
+                
+                });
+
+                campDetailGrid.appendChild(card);
+            
+            });
+
+            showProfile(camps[campName][0]);
+
+            const firstCard = campDetailGrid.querySelector(".detail-mini-card");
+
+            if (firstCard) {
+
+                firstCard.classList.add("selected");
+                
+            }
+        
+        }
+
+        campButtons.forEach(function(button) {
+
+            button.addEventListener("click", function(event) {
+
+                event.preventDefault();
+                const campName = button.dataset.camp;
+                showCamp(campName);
+                
+                document.querySelectorAll(".camp-tabs button").forEach(function(btn) {
+
+                    btn.classList.remove("active");
+
+                });
+
+                if (button.tagName === "BUTTON") {
+
+                    button.classList.add("active");
+
+                }
+
+            });
+
+        });
+
+        const profileDetail = document.querySelector("#profileDetail");
+
+        function showProfile(person) {
+
+            profileDetail.innerHTML = `
+            
+                <div class="profile-card">
+                
+                    <div class="profile-top">
+                
+                        <img src="${person.img}" alt="${person.title}">
+
+                        <div class="profile-info">
+                
+                            <h3>${person.title}</h3>
+                            <p class="stars">${person.stars}</p>
+                            <p><strong>代号：</strong>${person.code}</p>
+                            <p><strong>危险等级：</strong>${person.danger}</p>
+                            <p><strong>擅长领域：</strong>${person.field}</p>
+                            <p><strong>接单状态：</strong>${person.status}</p>
+
+                            <div class="skill-tags">
+                            
+                                ${person.tags.map(tag => `<span>${tag}</span>`).join("")}
+                            
+                            </div>
+                        
+                        </div>
+                    
+                    </div>
+
+                    <div class="task-review">
+                    
+                        <h4>任务评价：</h4>
+                        <p>“${person.review}”</p>
+                    
+                    </div>
+                
+                </div>
+            
+            `;
+        
+        }
+
+        showProfile(camps.killer[0]);
+
+        const backBtn = document.querySelector("#backBtn");
+
+        backBtn.addEventListener("click", function() {
+
+            campList.style.display = "block";
+            campDetailGrid.style.display = "none";
+            backBtn.style.display = "none";
+
+            document.querySelectorAll(".camp-tabs button").forEach(function(btn) {
+                
+                btn.classList.remove("active");
+            
+            });
+
+            document.querySelector('.camp-tabs button[data-camp="killer"]').classList.add("active");
+        
+        });
+
+        const miniCards = document.querySelectorAll(".mini-card");
+
+        miniCards.forEach(function(card) {
+            
+            card.addEventListener("click", function() {
+                
+                const campName = card.dataset.camp;
+                const personIndex = card.dataset.index;
+                const person = camps[campName][personIndex];
+                showProfile(person);
+
+                document.querySelectorAll(".mini-card").forEach(function(item) {
+                    
+                    item.classList.remove("selected");
+
+                });
+
+                card.classList.add("selected");
+
+            });
+
+        });
+
+    </script>
+
 
 
 
@@ -1513,9 +2008,7 @@
 
                     </div>
         </div>
-       
-    </section>    
-    
+           
     <section id="实时任务">
 
         <div class="card">
