@@ -450,18 +450,6 @@
 
         }
 
-        .services-desc {
-
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-            width: 50%;
-            font-size: 26px;
-            font-weight: bold;
-            line-height: 1.7;
-
-        }
-
         .coverage-intro{
 
             max-width: 1180px;
@@ -636,7 +624,6 @@
             flex: 1;
             background-color: #7b1f1f;
             width: 250px;
-            padding: 15px;
             padding: 25px 20px;
             margin-top: 40px;
             margin-bottom: 40px;
@@ -683,8 +670,7 @@
 
             background-color: rgb(59, 83, 60);
             width: 1250px;
-            padding: 15px;
-            padding-left: 40px;
+            padding: 15px 15px 15px 40px;
             margin-top: 40px;
             margin-bottom: 40px;
             border-radius: 12px;
@@ -708,8 +694,7 @@
 
             background-color: rgb(59, 83, 60);
             width: 1250px;
-            padding: 15px;
-            padding-left: 40px;
+            padding: 15px 15px 15px 40px;
             margin-top: 40px;
             margin-bottom: 40px;
             border-radius: 12px;
@@ -1161,7 +1146,7 @@
 
             </div>
 
-            <nav class="navbar", style="font-size: 20px;">
+            <nav class="navbar" style="font-size: 20px;">
 
                 <a href="#首页">
 
@@ -1509,11 +1494,11 @@
 
                 <div class="camp-tabs">
 
-                    <button data-camp="killer">杀手</button>
+                    <button data-camp="agent">特工</button>
 
                     <button data-camp="thief">盗贼</button>
 
-                    <button data-camp="agent">特工</button>
+                    <button data-camp="killer">杀手</button>
 
                     <button data-camp="alien">异族</button>
 
@@ -1524,55 +1509,7 @@
 
             </div>
 
-            <div class="agents-right" id="profileDetail">
-
-                <div class="profile-card">
-
-                    <div class="profile-layout">
-                    
-                        <div class="profile-poster">
-                        
-                            <img src="images/绝命双子星.JPG" alt="绝命双子星">
-
-                        </div>
-
-                        <div class="profile-identity">
-
-                            <h3>1346.绝命双子星</h3>
-                            <p class="stars">★★★★★</p>
-
-                        </div>
-
-                        <div class="profile-dossier">
-                        
-                            <p><strong>代号：</strong>绝命双子星</p>
-                            <p><strong>危险等级：</strong>★★★★★</p>
-                            <p><strong>接单状态：</strong>🟢 在线接单</p>
-                            <p class="field-line"><strong>擅长领域：</strong>潜入、刺杀、双人配合</p>
-
-                            <div class="skill-tags">
-                           
-                                <span>#双胞胎</span>
-                                <span>#伪装大师</span>
-                                <span>#连环计</span>
-                                <span>#塑料兄弟情</span>
-                           
-                            </div>
-
-                        </div>
-                    
-                        <div class="task-review">
-                        
-                            <h4>任务评价：</h4>
-                            <p>“虽然任务完成了，但他们俩一路都在吵架。”</p>
-                        
-                        </div>
-                
-                    </div>
-
-                </div>
-
-            </div>
+            <div class="agents-right" id="profileDetail"></div>
 
         </div>
 
@@ -1580,12 +1517,13 @@
 
     <script>
         const camps = {
-            killer: [
+            agent: [
 
                 {
                     
                     title: "1346.绝命双子星",
-                    img: "images/绝命双子星.JPG",
+                    thumbImg: "images/绝命双子星头像.JPG",
+                    posterImg: "images/绝命双子星.JPG",
                     stars: "★★★★★",
                     code: "绝命双子星",
                     danger: "★★★★★",
@@ -1598,8 +1536,8 @@
                 
                 {
                 
-                    title: "1346.绝命双子星",
-                    img: "images/绝命双子星.JPG",
+                    title: "222.特工2号",
+                    img: "images/特工2号.JPG",
                     stars: "★★★★★"
                 
                 },
@@ -1607,7 +1545,7 @@
                 {
                 
                     title: "998.西装暴徒",
-                    img: "images/killer3.jpg",
+                    img: "images/agent3.jpg",
                     stars: "★★★★☆"
                 
                 },
@@ -1615,7 +1553,7 @@
                 {
                 
                     title: "886.沉默厨师",
-                    img: "images/killer4.jpg",
+                    img: "images/agent4.jpg",
                     stars: "★★★★☆"
                 
                 }
@@ -1658,12 +1596,12 @@
             
             ],
 
-            agent: [
+            killer: [
             
                 {
                 
-                    title: "1364.绝命双子星",
-                    img: "images/agent1.jpg",
+                    title: "1111.杀手1号",
+                    img: "images/killer1.jpg",
                     stars: "★★★★★"
                 
                 },
@@ -1671,7 +1609,7 @@
                 {
                 
                     title: "913.代号乌鸦",
-                    img: "images/agent2.jpg",
+                    img: "images/killer2.jpg",
                     stars: "★★★★☆"
                 
                 },
@@ -1679,7 +1617,7 @@
                 {
                 
                     title: "774.深海幽灵",
-                    img: "images/agent3.jpg",
+                    img: "images/killer3.jpg",
                     stars: "★★★★☆"
                 
                 },
@@ -1687,7 +1625,7 @@
                 {
                 
                     title: "404.失联特工",
-                    img: "images/agent4.jpg",
+                    img: "images/killer4.jpg",
                     stars: "★★★☆☆"
                 
                 }
@@ -1758,7 +1696,7 @@
 
                 card.innerHTML = `
             
-                    <img src="${person.img}" alt="${person.title}">
+                    <img src="${person.thumbImg || person.img}" alt="${person.title}">
                     <h4>${person.title}</h4>
                     <p>${person.stars}</p>
                 
@@ -1818,7 +1756,7 @@
                 
                         <div class="profile-poster">
                         
-                            <img src="${person.img}" alt="${person.title}">
+                            <img src="${person.posterImg || person.img}" alt="${person.title}">
 
                         </div>
 
@@ -1859,7 +1797,7 @@
         
         }
 
-        showCamp("killer");
+        showCamp("agent");
 
     </script>
 
