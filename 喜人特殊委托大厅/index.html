@@ -824,7 +824,6 @@
         .agents-left,
         .agents-right {
 
-            height: min(650px, calc(100vh - 130px));
             box-sizing: border-box;
 
         }
@@ -835,6 +834,7 @@
             border: 4px solid #6b4b2a;
             border-radius: 16px;
             padding: 20px;
+            height: min(650px, calc(100vh - 130px));
             display: flex;
             flex-direction: column;
             overflow: hidden;
@@ -848,6 +848,14 @@
             border: 6px solid #8a5a2b;
             border-radius: 16px;
             padding: 25px;
+            height: min(650px, calc(100vh - 130px));
+            overflow: hidden;
+
+        }
+
+        .profile-card {
+
+            height: 100%;
 
         }
 
@@ -897,17 +905,22 @@
             
             display: grid;
             grid-template-columns: minmax(360px, 1.2fr) 1fr;
+            grid-template-rows: minmax(0, 1fr) 132px 128px;
             grid-template-areas:
-                "poster info"
-                "title skills";
-            gap: 25px 30px;
-            align-items: start;
+                "poster dossier"
+                "identity dossier"
+                "review review";
+            gap: 18px 30px;
+            align-items: stretch;
+            height: 100%;
+            min-height: 0;
         
         }
 
         .profile-poster {
 
             grid-area: poster;
+            min-height: 0;
         
         }
 
@@ -922,40 +935,58 @@
         
         }
 
-        .profile-title {
+        .profile-identity {
 
-            grid-area: title;
+            grid-area: identity;
             display: flex;
+            flex-direction: column;
             align-items: center;
-            flex-wrap: wrap;
+            justify-content: center;
             gap: 12px;
+            min-height: 0;
+            padding: 10px 22px;
+            box-sizing: border-box;
+            overflow: hidden;
+            transform: translateY(30px);
         
         }
 
-        .profile-title h3 {
+        .profile-identity h3 {
         
-            font-size: 36px;
+            font-size: clamp(28px, 3vw, 40px);
             margin: 0;
             color: #ffffff;
+            line-height: 1.1;
+            white-space: nowrap;
         
         }
 
         .stars {
         
-            font-size: 26px;
+            font-size: clamp(22px, 2vw, 28px);
             color: #9e2b20;
-            letter-spacing: 6px;
+            letter-spacing: 5px;
             margin: 0;
         
         }
 
-        .profile-info {
+        .profile-dossier {
 
-            grid-area: info;
+            grid-area: dossier;
+            min-height: 0;
+            padding: 22px;
+            background: rgba(247, 225, 181, 0.35);
+            border-radius: 8px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+            align-self: stretch;
+            overflow: hidden;
         
         }
 
-        .profile-info p {
+        .profile-dossier p {
         
             font-size: 18px;
             border-bottom: 2px dashed #8a5a2b;
@@ -964,18 +995,9 @@
         
         }
 
-        .profile-skills {
+        .profile-dossier p.field-line {
 
-            grid-area: skills;
-        
-        }
-
-        .profile-skills p {
-
-            font-size: 18px;
             font-weight: bold;
-            border-bottom: 2px dashed #8a5a2b;
-            padding-bottom: 10px;
             margin: 0 0 16px;
         
         }
@@ -999,12 +1021,14 @@
 
         .task-review {
         
-            margin-top: 30px;
+            grid-area: review;
             background: #21160f;
             color: #f7e1b5;
-            padding: 25px;
+            padding: 22px 25px;
             border-radius: 12px;
-            height: 85px;
+            height: 140px;
+            box-sizing: border-box;
+            overflow: auto;
         
         }
 
@@ -1018,6 +1042,12 @@
         .task-review p {
         
             font-size: 20px;
+            line-height: 1.45;
+            margin: 0;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
         
         }
 
@@ -1506,45 +1536,40 @@
 
                         </div>
 
-                        <div class="profile-title">
+                        <div class="profile-identity">
 
                             <h3>1346.绝命双子星</h3>
                             <p class="stars">★★★★★</p>
 
                         </div>
 
-                        <div class="profile-info">
-                    
+                        <div class="profile-dossier">
+                        
                             <p><strong>代号：</strong>绝命双子星</p>
                             <p><strong>危险等级：</strong>★★★★★</p>
                             <p><strong>接单状态：</strong>🟢 在线接单</p>
-                       
-                        </div>
-
-                        <div class="profile-skills">
-
-                            <p><strong>擅长领域：</strong>潜入、刺杀、双人配合</p>
+                            <p class="field-line"><strong>擅长领域：</strong>潜入、刺杀、双人配合</p>
 
                             <div class="skill-tags">
-                       
+                           
                                 <span>#双胞胎</span>
                                 <span>#伪装大师</span>
                                 <span>#连环计</span>
                                 <span>#塑料兄弟情</span>
-                       
+                           
                             </div>
 
                         </div>
                     
+                        <div class="task-review">
+                        
+                            <h4>任务评价：</h4>
+                            <p>“虽然任务完成了，但他们俩一路都在吵架。”</p>
+                        
+                        </div>
+                
                     </div>
 
-                    <div class="task-review">
-                    
-                        <h4>任务评价：</h4>
-                        <p>“虽然任务完成了，但他们俩一路都在吵架。”</p>
-                    
-                    </div>
-                
                 </div>
 
             </div>
@@ -1797,42 +1822,37 @@
 
                         </div>
 
-                        <div class="profile-title">
+                        <div class="profile-identity">
                 
                             <h3>${person.title}</h3>
                             <p class="stars">${person.stars}</p>
 
                         </div>
 
-                        <div class="profile-info">
-                
+                        <div class="profile-dossier">
+                    
                             <p><strong>代号：</strong>${person.code || person.title}</p>
                             <p><strong>危险等级：</strong>${person.danger || person.stars}</p>
                             <p><strong>接单状态：</strong>${person.status || "待确认"}</p>
-                        
-                        </div>
-
-                        <div class="profile-skills">
-
-                            <p><strong>擅长领域：</strong>${person.field || "资料整理中"}</p>
+                            <p class="field-line"><strong>擅长领域：</strong>${person.field || "资料整理中"}</p>
 
                             <div class="skill-tags">
-                            
+                                
                                 ${(person.tags || []).map(tag => `<span>${tag}</span>`).join("")}
-                            
+                                
                             </div>
-
+                            
                         </div>
                     
+                        <div class="task-review">
+                        
+                            <h4>任务评价：</h4>
+                            <p>“${person.review}”</p>
+                        
+                        </div>
+                
                     </div>
 
-                    <div class="task-review">
-                    
-                        <h4>任务评价：</h4>
-                        <p>“${person.review}”</p>
-                    
-                    </div>
-                
                 </div>
             
             `;
