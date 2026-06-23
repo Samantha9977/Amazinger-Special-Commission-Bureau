@@ -17,15 +17,16 @@
 
         }
 
-        .service-title p {
+        .services-title p {
 
             margin: 10px 0 0;
-            font-size: px;
+            font-size: 22px;
             letter-spacing: 3px;
+            color: #f5d7a1;
 
         }
 
-        .service-intro p {
+        .services-intro p {
 
             margin: 0 0 6px;
 
@@ -66,7 +67,7 @@
 
         }
 
-        .service-title h2 {
+        .services-title h2 {
 
             font-size: clamp(42px, 5vw, 64px);
             margin: 0;
@@ -82,7 +83,7 @@
 
         }
 
-        .service-main h3{
+        .services-main h3{
 
             font-size: 30px;
             margin-bottom: 20px;
@@ -386,7 +387,7 @@
 
         }
 
-        .service {
+        .services {
 
             min-height: 100vh;
 
@@ -400,7 +401,7 @@
 
         }
 
-        .service-top {
+        .services-top {
 
             display: flex;
             justify-content: space-between;
@@ -410,7 +411,7 @@
 
         }
 
-        .service-title {
+        .services-title {
 
             background: linear-gradient(
 
@@ -430,7 +431,7 @@
 
         }
 
-        .service-intro {
+        .services-intro {
 
             max-width: 520px;
             font-size: 22px;
@@ -438,7 +439,7 @@
 
         }
 
-        .service-main {
+        .services-main {
 
             display: flex;
             flex-direction: column;
@@ -449,7 +450,7 @@
 
         }
 
-        .service-desc {
+        .services-desc {
 
             display: flex;
             flex-direction: column;
@@ -484,13 +485,13 @@
 
             }
 
-            .service-title {
+            .services-title {
 
                 padding: 22px 28px;
 
             }
 
-            .service-title h2 {
+            .services-title h2 {
 
                 font-size: 42px;
                 letter-spacing: 4px;
@@ -621,7 +622,7 @@
 
         }
 
-        .service-stats {
+        .services-stats {
 
             display: flex;
             gap: 80px;
@@ -716,80 +717,131 @@
         
         }
 
-        .mercenary-section {
+        .agents-section {
 
             min-height: 100vh;
-            padding: 80px 60px;
-            background: #151515;
-            color: #f7e1b5;
+            padding: 90px 3%;
+            background:
+                radial-gradient(circle at top left, rgba(245, 215, 161, 0.08) 0%, rgba(17, 17, 17, 0.9) 35%),
+                linear-gradient(180deg, #050505 0%, #111 100%);
+            color: #f5d7a1;
+            box-sizing: border-box;
 
         }
 
-        .mercenary-header {
+        .agents-header {
 
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            gap: 40px;
+            gap: 60px;
             margin-bottom: 40px;
 
         }
 
         .title-card {
 
-            width: 360px;
-            padding: 35px 20px;
+            width: auto;
+            padding: 25px 60px;
             text-align: center;
-            background: linear-gradient(#a52b21, #751811);
-            border: 8px solid #c99645;
-            border-radius: 20px;
-            box-shadow: 0 0 25px rgba(201, 150, 69, 0.4);
+            background: linear-gradient(
+                to bottom,
+                #9e2b1e,
+                #6f1812
+            );
+            border: 6px solid #c99b52;
+            border-radius: 10px;
+            box-shadow: 0 0 0 4px rgba(245, 215, 161, 0.12), 0 0 25px rgba(201, 150, 69, 0.4);
 
         }
 
         .title-card h2 {
 
-            font-size: 56px;
+            font-size: clamp(42px, 5vw, 64px);
             margin: 0;
             letter-spacing: 8px;
+            color: #f5d7a1;
 
         }
 
         .title-card p {
 
             font-size: 22px;
-            letter-spacing: 10px;
-            margin-top: 15px;
+            letter-spacing: 3px;
+            margin-top: 10px;
+            color: #f5d7a1;
         
         }
 
         .slogan {
 
             flex: 1;
-            font-size: 28px;
+            max-width: 520px;
+            font-size: 22px;
+            line-height: 1.8;
             font-weight: bold;
-            letter-spacing: 4px;
-            color: #ffd99a;
+            color: #f5d7a1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 10px;
 
         }
 
-        .mercenary-main {
+        .slogan p,
+        .services-intro p {
+
+            margin: 0;
+            color: #f5d7a1;
+            font-size: 22px;
+            line-height: 1.8;
+
+        }
+
+        .slogan p:not(.agency-name) {
+
+            letter-spacing: 0.3px;
+
+        }
+
+        .slogan .agency-name {
+
+            color: #b7352c;
+            text-align: right;
+            margin-top: 10px;
+
+        }
+
+        .agents-main {
 
             display: grid;
             grid-template-columns: 1fr 2fr;
             gap: 30px;
+            align-items: start;
 
         }
 
-        .mercenary-left {
+        .agents-left,
+        .agents-right {
+
+            height: min(650px, calc(100vh - 130px));
+            box-sizing: border-box;
+
+        }
+
+        .agents-left {
 
             background: #241f1b;
             border: 4px solid #6b4b2a;
             border-radius: 16px;
             padding: 20px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
 
         }
 
-        .mercenary-right {
+        .agents-right {
 
             background: #ead2a4;
             color: #21160f;
@@ -821,7 +873,6 @@
 
         }
 
-        .camp-tabs button:hover,
         .camp-tabs button.active {
 
             background: #b52b20;
@@ -829,122 +880,63 @@
 
         }
 
-        .camp-row {
+        .camp-tabs button:hover {
 
-            margin-bottom: 28px;
-            border-bottom: 2px dashed #7d5a35;
-            padding-bottom: 24px;
-        
+            transform: translateY(-3px);
+
         }
 
-        .camp-row-title {
-        
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 14px;
-        
+        .camp-tabs button:not(.active):hover,
+        .camp-tabs button:not(.active):focus {
+
+            background: #4a1b16;
+
         }
 
-        .small-label {
-        
-            background: #9e2b20;
-            color: #ffe3aa;
-            border: 3px solid #c99645;
-            border-radius: 8px;
-            padding: 6px 14px;
-            font-weight: bold;
-            white-space: nowrap;
-        
-        }
-
-        .camp-row-title p {
-        
-            flex: 1;
-            margin: 0;
-            font-size: 15px;
-        
-        }
-
-        .camp-row-title a {
-        
-            color: #ffb347;
-            text-decoration: none;
-            font-weight: bold;
-        
-        }
-
-        .mini-card-box {
-        
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-        
-        }
-
-        .mini-card {
-        
-            background: #d8b579;
-            color: #21160f;
-            border: 4px solid #7a4d24;
-            border-radius: 10px;
-            overflow: hidden;
-            text-align: center;
-            cursor: pointer;
-            transition: 0.3s;
-        
-        }
-
-        .mini-card:hover {
-        
-            transform: translateY(-6px) scale(1.03);
-            box-shadow: 0 0 18px rgba(255, 191, 87, 0.6);
-        
-        }
-
-        .mini-card img {
-        
-            width: 100%;
-            height: 130px;
-            object-fit: cover;
-        
-        }
-
-        .mini-card h4 {
-        
-            margin: 8px 0 4px;
-            font-size: 16px;
-        
-        }
-
-        .mini-card p {
-        
-            margin: 0 0 10px;
-            color: #8b1e16;
-        
-        }
-
-        .profile-top {
+        .profile-layout {
             
             display: grid;
-            grid-template-columns: 1fr 1.2fr;
-            gap: 25px;
+            grid-template-columns: minmax(360px, 1.2fr) 1fr;
+            grid-template-areas:
+                "poster info"
+                "title skills";
+            gap: 25px 30px;
+            align-items: start;
         
         }
 
-        .profile-top img {
+        .profile-poster {
+
+            grid-area: poster;
+        
+        }
+
+        .profile-poster img {
         
             width: 100%;
-            height: 360px;
+            aspect-ratio: 7 / 6;
             object-fit: cover;
             border: 5px solid #21160f;
+            border-radius: 4px;
+            box-sizing: border-box;
         
         }
 
-        .profile-info h3 {
+        .profile-title {
+
+            grid-area: title;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        
+        }
+
+        .profile-title h3 {
         
             font-size: 36px;
-            margin: 0 0 10px;
+            margin: 0;
+            color: #ffffff;
         
         }
 
@@ -953,6 +945,13 @@
             font-size: 26px;
             color: #9e2b20;
             letter-spacing: 6px;
+            margin: 0;
+        
+        }
+
+        .profile-info {
+
+            grid-area: info;
         
         }
 
@@ -961,6 +960,23 @@
             font-size: 18px;
             border-bottom: 2px dashed #8a5a2b;
             padding-bottom: 10px;
+            margin: 0 0 18px;
+        
+        }
+
+        .profile-skills {
+
+            grid-area: skills;
+        
+        }
+
+        .profile-skills p {
+
+            font-size: 18px;
+            font-weight: bold;
+            border-bottom: 2px dashed #8a5a2b;
+            padding-bottom: 10px;
+            margin: 0 0 16px;
         
         }
 
@@ -988,6 +1004,7 @@
             color: #f7e1b5;
             padding: 25px;
             border-radius: 12px;
+            height: 85px;
         
         }
 
@@ -1005,14 +1022,38 @@
         }
 
         .camp-detail-grid {
-            
+
             display: none;
             grid-template-columns: repeat(2, 1fr);
+            grid-auto-rows: 260px;
             gap: 18px;
-            max-height: 520px;
-            overflow-y: auto;
-            padding-right: 8px;
-       
+            flex: 1;
+            min-height: 0;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            padding-right: 12px;
+            scrollbar-gutter: stable;
+
+        }
+
+        .camp-detail-grid::-webkit-scrollbar {
+
+            width: 10px;
+
+        }
+
+        .camp-detail-grid::-webkit-scrollbar-track {
+
+            background: #21160f;
+            border-radius: 999px;
+
+        }
+
+        .camp-detail-grid::-webkit-scrollbar-thumb {
+
+            background: #b8863b;
+            border-radius: 999px;
+
         }
 
         .detail-mini-card {
@@ -1025,6 +1066,8 @@
             text-align: center;
             cursor: pointer;
             transition: 0.3s;
+            display: flex;
+            flex-direction: column;
         
         }
 
@@ -1038,8 +1081,9 @@
         .detail-mini-card img {
         
             width: 100%;
-            height: 150px;
+            height: 62%;
             object-fit: cover;
+            display: block;
         
         }
 
@@ -1057,28 +1101,6 @@
         
         }
 
-        .back-btn {
-         
-            display: none;
-            margin-bottom: 15px;
-            padding: 10px 18px;
-            background: #9e2b20;
-            color: #ffe3aa;
-            border: 3px solid #c99645;
-            border-radius: 10px;
-            font-weight: bold;
-            cursor: pointer;
-        
-        }
-
-        .back-btn:hover {
-       
-            transform: translateY(-3px);
-            background: #b52b20;
-        
-        }
-
-        .mini-card.selected,
         .detail-mini-card.selected {
 
             outline: 4px solid #ffd15c;
@@ -1121,7 +1143,7 @@
                 <a href="#业务大厅">
 
                     <span class="cn">业务大厅</span>
-                    <span class="en">Service</span>
+                    <span class="en">Services</span>
 
                 </a>
 
@@ -1179,20 +1201,20 @@
 
     </section>
 
-    <section class="service" id="业务大厅">
+    <section class="services" id="业务大厅">
 
         <div class="stage-content">
 
-            <div class="service-top">
+            <div class="services-top">
 
-                <div class="service-title">
+                <div class="services-title">
 
                     <h2>业务大厅</h2>
-                    <p>Service</p>
+                    <p>Services</p>
 
                 </div>
 
-                <div class="service-intro">
+                <div class="services-intro">
 
                     <p>“在这个世界上，</p>
                     <p>有人需要杀手，有人需要怪盗，有人需要卧底，也有人需要别人帮自己完成拼多多最后一刀。”</p>
@@ -1202,7 +1224,7 @@
 
             </div>
 
-            <div class="service-main">
+            <div class="services-main">
 
                 <h3>业务覆盖面</h3>
 
@@ -1399,7 +1421,7 @@
 
             </div>
 
-            <div class="service-stats">
+            <div class="services-stats">
 
                 <div class="stat-card">
 
@@ -1429,33 +1451,35 @@
         
     </section>
 
-    <section id="佣兵图鉴">
+    <section class="agents-section" id="佣兵图鉴">
 
-        <div class="mercenary-header">
+        <div class="agents-header">
 
                 <div class="title-card">
 
                     <h2>佣兵图鉴</h2>
 
-                    <p>Mercenary</p>
+                    <p>Agents</p>
 
                 </div>
 
                 <div class="slogan">
 
-                    四大阵营，真实可靠，专业团队，绝不掉凳
+                    <p>“四大阵营，真实可靠，</p>
+                    <p>专业团队，绝不掉凳。”</p>
+                    <p class="agency-name">—— 喜人特殊业务委托局</p>
 
                 </div>
 
         </div>
 
-        <div class="mercenary-main">
+        <div class="agents-main">
 
-            <div class="mercenary-left">
+            <div class="agents-left">
 
                 <div class="camp-tabs">
 
-                    <button class="active" data-camp="killer">杀手</button>
+                    <button data-camp="killer">杀手</button>
 
                     <button data-camp="thief">盗贼</button>
 
@@ -1465,152 +1489,41 @@
 
                 </div>
 
-                <div class="camp-list">
-
-                    <div class="camp-row">
-
-                        <div class="camp-row-title">
-
-                            <span class="small-label">杀手</span>
-                            <p>专业解决一切棘手问题，原则上解决问题，不保证问题对象存活。</p>
-                            <a href="#" data-camp="killer">更多 →</a>
-
-                        </div>
-
-                        <div class="mini-card-box">
-
-                            <div class="mini-card" data-camp="killer" data-index="0">
-                            
-                                <img src="images/killer1.jpg" alt="">
-                                <h4>1421.血色钢琴师</h4>
-                                <p>★★★★★</p>
-                            
-                            </div>
-
-                            <div class="mini-card" data-camp="killer" data-index="1">
-                            
-                                <img src="images/killer2.jpg" alt="">
-                                <h4>1346.绝命双子星</h4>
-                                <p>★★★★★</p>
-                            
-                            </div>
-                    
-                        </div>
-
-                        <div class="camp-row-title">
-
-                            <span class="small-label">盗贼</span>
-                            <p>盗贼盗贼盗盗贼贼。</p>
-                            <a href="#" data-camp="thief">更多 →</a>
-
-                        </div>
-
-                        <div class="mini-card-box">
-
-                            <div class="mini-card" data-camp="thief" data-index="0">
-                            
-                                <img src="images/thief1.jpg" alt="">
-                                <h4>111.盗贼0号</h4>
-                                <p>★★★★★</p>
-                            
-                            </div>
-
-                            <div class="mini-card" data-camp="thief" data-index="1">
-                            
-                                <img src="images/thief2.jpg" alt="">
-                                <h4>222.盗贼1号</h4>
-                                <p>★★★★★</p>
-                            
-                            </div>
-                    
-                        </div>
-
-                        <div class="camp-row-title">
-
-                            <span class="small-label">特工</span>
-                            <p>特工特工特特工工</p>
-                            <a href="#" data-camp="agent">更多 →</a>
-
-                        </div>
-
-                        <div class="mini-card-box">
-
-                            <div class="mini-card" data-camp="agent" data-index="0">
-                            
-                                <img src="images/agent1.jpg" alt="">
-                                <h4>333.特工0号</h4>
-                                <p>★★★★★</p>
-                            
-                            </div>
-
-                            <div class="mini-card" data-camp="agent" data-index="1">
-                            
-                                <img src="images/agent2.jpg" alt="">
-                                <h4>444.特工1号</h4>
-                                <p>★★★★★</p>
-                            
-                            </div>
-                    
-                        </div>
-
-                        <div class="camp-row-title">
-
-                            <span class="small-label">异族</span>
-                            <p>异族异族异异族族</p>
-                            <a href="#" data-camp="alien">更多 →</a>
-
-                        </div>
-
-                        <div class="mini-card-box">
-
-                            <div class="mini-card" data-camp="alien" data-index="0">
-                            
-                                <img src="images/alien1.jpg" alt="">
-                                <h4>555.异族0号</h4>
-                                <p>★★★★★</p>
-                            
-                            </div>
-
-                            <div class="mini-card" data-camp="alien" data-index="1">
-                            
-                                <img src="images/alien2.jpg" alt="">
-                                <h4>666.异族1号</h4>
-                                <p>★★★★★</p>
-                            
-                            </div>
-                    
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <button class="back-btn" id="backBtn">← 返回全部图鉴</button>
-
-                <div class="camp-detail-grid" id="campDetailGrid">
-                </div>
-
                 <div class="camp-detail-grid" id="campDetailGrid">
                 </div>
 
             </div>
 
-            <div class="mercenary-right" id="profileDetail">
+            <div class="agents-right" id="profileDetail">
 
                 <div class="profile-card">
 
-                    <div class="profile-top">
+                    <div class="profile-layout">
                     
-                        <img src="images/killer2.jpg" alt="绝命双子星">
+                        <div class="profile-poster">
+                        
+                            <img src="images/绝命双子星.JPG" alt="绝命双子星">
+
+                        </div>
+
+                        <div class="profile-title">
+
+                            <h3>1346.绝命双子星</h3>
+                            <p class="stars">★★★★★</p>
+
+                        </div>
 
                         <div class="profile-info">
                     
-                            <h3>1346.绝命双子星</h3>
-                            <p class="stars">★★★★★</p>
                             <p><strong>代号：</strong>绝命双子星</p>
                             <p><strong>危险等级：</strong>★★★★★</p>
-                            <p><strong>擅长领域：</strong>潜入、刺杀、双人配合</p>
                             <p><strong>接单状态：</strong>🟢 在线接单</p>
+                       
+                        </div>
+
+                        <div class="profile-skills">
+
+                            <p><strong>擅长领域：</strong>潜入、刺杀、双人配合</p>
 
                             <div class="skill-tags">
                        
@@ -1620,7 +1533,7 @@
                                 <span>#塑料兄弟情</span>
                        
                             </div>
-                       
+
                         </div>
                     
                     </div>
@@ -1647,7 +1560,7 @@
                 {
                     
                     title: "1346.绝命双子星",
-                    img: "images/killer2.jpg",
+                    img: "images/绝命双子星.JPG",
                     stars: "★★★★★",
                     code: "绝命双子星",
                     danger: "★★★★★",
@@ -1661,7 +1574,7 @@
                 {
                 
                     title: "1346.绝命双子星",
-                    img: "images/killer2.jpg",
+                    img: "images/绝命双子星.JPG",
                     stars: "★★★★★"
                 
                 },
@@ -1794,15 +1707,23 @@
         
         };
 
-        const campList = document.querySelector(".camp-list");
         const campDetailGrid = document.querySelector("#campDetailGrid");
-        const campButtons = document.querySelectorAll("[data-camp]");
+        const campButtons = document.querySelectorAll(".camp-tabs button");
+
+        function setActiveCamp(campName) {
+
+            campButtons.forEach(function(button) {
+
+                button.classList.toggle("active", button.dataset.camp === campName);
+
+            });
+
+        }
 
         function showCamp(campName) {
             
-            campList.style.display = "none";
+            setActiveCamp(campName);
             campDetailGrid.style.display = "grid";
-            backBtn.style.display = "inline-block";
             campDetailGrid.innerHTML = "";
 
             camps[campName].forEach(function(person) {
@@ -1855,18 +1776,6 @@
                 event.preventDefault();
                 const campName = button.dataset.camp;
                 showCamp(campName);
-                
-                document.querySelectorAll(".camp-tabs button").forEach(function(btn) {
-
-                    btn.classList.remove("active");
-
-                });
-
-                if (button.tagName === "BUTTON") {
-
-                    button.classList.add("active");
-
-                }
 
             });
 
@@ -1880,25 +1789,39 @@
             
                 <div class="profile-card">
                 
-                    <div class="profile-top">
+                    <div class="profile-layout">
                 
-                        <img src="${person.img}" alt="${person.title}">
+                        <div class="profile-poster">
+                        
+                            <img src="${person.img}" alt="${person.title}">
 
-                        <div class="profile-info">
+                        </div>
+
+                        <div class="profile-title">
                 
                             <h3>${person.title}</h3>
                             <p class="stars">${person.stars}</p>
-                            <p><strong>代号：</strong>${person.code}</p>
-                            <p><strong>危险等级：</strong>${person.danger}</p>
-                            <p><strong>擅长领域：</strong>${person.field}</p>
-                            <p><strong>接单状态：</strong>${person.status}</p>
+
+                        </div>
+
+                        <div class="profile-info">
+                
+                            <p><strong>代号：</strong>${person.code || person.title}</p>
+                            <p><strong>危险等级：</strong>${person.danger || person.stars}</p>
+                            <p><strong>接单状态：</strong>${person.status || "待确认"}</p>
+                        
+                        </div>
+
+                        <div class="profile-skills">
+
+                            <p><strong>擅长领域：</strong>${person.field || "资料整理中"}</p>
 
                             <div class="skill-tags">
                             
-                                ${person.tags.map(tag => `<span>${tag}</span>`).join("")}
+                                ${(person.tags || []).map(tag => `<span>${tag}</span>`).join("")}
                             
                             </div>
-                        
+
                         </div>
                     
                     </div>
@@ -1916,48 +1839,7 @@
         
         }
 
-        showProfile(camps.killer[0]);
-
-        const backBtn = document.querySelector("#backBtn");
-
-        backBtn.addEventListener("click", function() {
-
-            campList.style.display = "block";
-            campDetailGrid.style.display = "none";
-            backBtn.style.display = "none";
-
-            document.querySelectorAll(".camp-tabs button").forEach(function(btn) {
-                
-                btn.classList.remove("active");
-            
-            });
-
-            document.querySelector('.camp-tabs button[data-camp="killer"]').classList.add("active");
-        
-        });
-
-        const miniCards = document.querySelectorAll(".mini-card");
-
-        miniCards.forEach(function(card) {
-            
-            card.addEventListener("click", function() {
-                
-                const campName = card.dataset.camp;
-                const personIndex = card.dataset.index;
-                const person = camps[campName][personIndex];
-                showProfile(person);
-
-                document.querySelectorAll(".mini-card").forEach(function(item) {
-                    
-                    item.classList.remove("selected");
-
-                });
-
-                card.classList.add("selected");
-
-            });
-
-        });
+        showCamp("killer");
 
     </script>
 
